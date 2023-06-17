@@ -1,0 +1,8 @@
+[init]
+	defaultBranch = main
+[user]
+	name = Dario Nesi
+	email = dario.nesi@mail.polimi.it
+[alias]
+  co = checkout
+
