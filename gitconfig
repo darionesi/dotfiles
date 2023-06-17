@@ -5,4 +5,4 @@
 	email = dario.nesi@mail.polimi.it
 [alias]
   co = checkout
-
+  r = remote -v
