@@ -1,0 +1,5 @@
+#!/bin/bash
+next=$(ls -ltr1 ~/.config/alacritty/*theme*.yml|head -1)
+echo $next
+cp $next ~/.config/alacritty/alacritty.yml
+touch $next
