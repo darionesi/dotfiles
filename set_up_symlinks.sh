@@ -1,4 +1,5 @@
 #!/bin/bash
-ln -s $PWD/config/ ~/.config
-ln -s $PWD/gitconfig ~/.gitconfig
-ln -s $PWD/local/ ~/.local
+HERE=`dirname $(realpath $0)`
+ln -s $HERE/config/ ~/.config
+ln -s $HERE/gitconfig ~/.gitconfig
+ln -s $HERE/local/ ~/.local
