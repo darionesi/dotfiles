@@ -1,34 +1,109 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run the `open default settings` command
-// from the command palette or from `Zed` application menu.
 {
+  "disable_ai": true,
+  "minimap": {
+    "show": "auto"
+  },
+  "git": {
+    "inline_blame": {
+      "show_commit_summary": true
+    }
+  },
+  "inlay_hints": {
+    "enabled": false,
+    "show_background": true,
+    "show_other_hints": true,
+    "show_parameter_hints": true,
+    "show_type_hints": true,
+    "toggle_on_modifiers_press": {
+      "control": true
+    }
+  },
+  "preview_tabs": { "enabled": false },
+  "line_indicator_format": "long",
+  "context_servers": {
+    "shadcn": {
+      "enabled": true,
+      "source": "custom",
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://www.shadcn.io/api/mcp"],
+      "env": {}
+    }
+  },
+  "ssh_connections": [
+    {
+      "host": "192.168.0.247",
+      "username": "user",
+      "projects": [
+        {
+          "paths": ["/home/user"]
+        },
+        {
+          "paths": ["/home/user/nixos-config"]
+        }
+      ]
+    }
+  ],
+  "theme": {
+    "dark": "Ayu Mirage",
+    "light": "Ayu Mirage",
+    "mode": "system"
+  },
+  "ui_font_family": ".SystemUIFont",
   "features": {
     "edit_prediction_provider": "zed"
   },
-  "assistant": {
+  "agent": {
+    "always_allow_tool_actions": false,
+    "default_profile": "write",
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4"
-    },
-    "version": "2"
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
+    }
   },
   "ui_font_size": 13,
   "terminal": {
     "font_family": "SauceCodePro Nerd Font",
     "blinking": "on",
     "font_size": 12,
-    "dock": "bottom"
+    "dock": "bottom",
+    "cursor_shape": "bar"
   },
-  // "buffer_font_family": "FiraCode Nerd Font",
-  // "ui_font_family": "FiraCode Nerd Font Mono",
+  "buffer_font_family": "SauceCodePro Nerd Font Mono",
   "buffer_font_size": 13,
   "telemetry": {
     "diagnostics": false,
     "metrics": false
+  },
+  "format_on_save": "on",
+  "file_types": {
+    "*.logo": ["logo"],
+    "*.lgo": ["logo"]
+  },
+  "languages": {
+    "logo": {
+      "language_servers": ["logo-lsp"]
+    },
+    "Shell Script": {
+      "language_servers": ["bash-language-server", "shellcheck", "..."],
+      "enable_language_server": false
+    },
+    "Plain Text": {
+      "language_servers": ["logo-lsp"]
+    }
+  },
+  "lsp": {
+    "bash-language-server": {
+      "binary": {
+        "ignore_system_version": false,
+        "path": "/opt/homebrew/bin/bash-language-server",
+        "arguments": ["start"]
+      }
+    },
+    "logo-lsp": {
+      "binary": {
+        "path": "/Users/dario/ws/code/target/debug/logo",
+        "arguments": []
+      }
+    }
   }
 }
