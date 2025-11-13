@@ -1,6 +1,11 @@
-theme="dark_plus"
+theme="ayu_dark"
 [editor]
 bufferline="multiple"
+completion-replace = true
+end-of-line-diagnostics = "hint"
+trim-trailing-whitespace = true
+
+
 [editor.cursor-shape]
 insert = "bar"
 select = "underline"
@@ -11,3 +16,5 @@ center = ["version-control"]
 [editor.whitespace.render]
 tab = "all"
 newline = "all"
+[editor.inline-diagnostics]
+cursor-line = "warning" # show warnings and errors on the cursorline inline

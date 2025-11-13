@@ -1,0 +1,11 @@
+font-size = 14
+
+font-family = "SauceCodePro Nerd Font Mono"
+font-style = "Regular"
+
+# theme = "Github-Light-Default"
+# theme = light:Github-Light-Default,dark:Ghostty Default StyleDark
+# theme = Ghostty Default StyleDark
+
+window-padding-x = 6
+window-padding-y = 6
