@@ -1,3 +1,6 @@
 .DS_Store
 config/filezilla
 config/github-copilot
+config/zed/conversations
+config/zed/embeddings
+config/zed/prompts
